@@ -1,0 +1,120 @@
+{
+  "Header": {
+    "about": "About",
+    "experience": "Experience",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "Hero": {
+    "portfolio": "Portfolio",
+    "hi": "Hi, I'm",
+    "description": "Frontend Developer crafting premium digital experiences. Currently acting as a Team Lead with a passion for beautiful UI and clean code.",
+    "viewProjects": "View My Projects",
+    "downloadCV": "Download CV",
+    "contactMe": "Contact Me"
+  },
+  "About": {
+    "title": "About Me",
+    "p1": "I am a <b>Frontend Developer</b> with 1.5 years of practical experience in commercial and government projects. I actively participate in the creation and development of real-world projects, working in a team and taking responsibility for the frontend implementation.",
+    "p2": "I have strong expertise in <b>React, TypeScript, REST API</b>, and modern frontend tools. I know how to navigate existing codebases, find and fix bugs, integrate APIs, and deliver features from start to finish.",
+    "p3": "Additionally, I possess basic practical knowledge of backend development using <b>Django REST Framework</b>. This enables me to effectively communicate with backend developers and understand the overall application architecture.",
+    "p4": "Currently, I also perform the duties of a <b>Team Lead</b>, coordinating the team's work, delegating tasks, monitoring the development process, and participating in technical decision-making.",
+    "education": "Education",
+    "geeks": "Geeks Academy",
+    "courses": "Frontend & Backend courses",
+    "currentStatus": "Current Status",
+    "lookingFor": "Looking for remote work",
+    "available": "Available immediately"
+  },
+  "Skills": {
+    "title": "My Skills"
+  },
+  "Projects": {
+    "title": "Featured Projects"
+  },
+  "ProjectsList": {
+    "vistyle": {
+      "name": "Вистайл",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (Not in prod)",
+      "description": "Commercial project development. Led the frontend team, developed key features and architecture."
+    },
+    "promontaj": {
+      "name": "ПроМонтаж",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (Not in prod)",
+      "description": "Web application for installation services. Managed the project delivery and coded the main UI components."
+    },
+    "omur": {
+      "name": "Омур",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (Not in prod)",
+      "description": "Ongoing project focused on delivering high-quality user experience."
+    },
+    "oba": {
+      "name": "ОБА",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (Not in prod)",
+      "description": "Complex frontend application with rich interactivity."
+    },
+    "enactus": {
+      "name": "Энактус",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (In prod)",
+      "description": "Platform for Enactus. Led the frontend implementation and ensured robust architecture."
+    },
+    "balajan": {
+      "name": "Балажан",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (In prod)",
+      "description": "Educational platform for kids. Focus on accessible and engaging UI."
+    },
+    "bilimordo": {
+      "name": "БилимОрдо",
+      "role": "Team Lead / Frontend",
+      "date": "Completed (In prod)",
+      "description": "Knowledge base and educational portal."
+    },
+    "geekspro": {
+      "name": "GeeksPro Portal",
+      "role": "Frontend Developer",
+      "date": "Completed (In prod)",
+      "description": "Main portal for GeeksPro."
+    },
+    "ktw": {
+      "name": "KTW Website",
+      "role": "Frontend Developer",
+      "date": "Completed (In prod)",
+      "description": "Corporate website for KTW."
+    }
+  },
+  "Experience": {
+    "title": "Experience",
+    "jobs": {
+      "geekspro": {
+        "company": "GeeksPro",
+        "role": "Team Lead",
+        "date": "March 5, 2026 - Present",
+        "description": "Led the development team and ensured code quality. Mentored interns, conducted code reviews, and taught best practices for writing clean and maintainable code. Established team communication processes and assisted in solving complex technical challenges."
+      }
+    }
+  },
+  "Contact": {
+    "title": "Get in Touch",
+    "subtitle": "I'm open to new opportunities and collaborations. Whether you have a project or just want to say hi, feel free to reach out!",
+    "nameLabel": "Your Name",
+    "namePlaceholder": "John Doe",
+    "telegramLabel": "Your Telegram",
+    "telegramPlaceholder": "@username",
+    "messageLabel": "Message",
+    "messagePlaceholder": "Hello Isa! I'd like to discuss...",
+    "sendButton": "Send Message",
+    "successMessage": "Message sent!",
+    "errorMessage": "Error sending"
+  },
+  "Footer": {
+    "title": "Let's Work Together",
+    "rights": "Frontend Developer. All rights reserved."
+  }
+}
