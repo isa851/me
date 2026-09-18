@@ -8,10 +8,12 @@ import { FaPaperPlane, FaCheckCircle, FaExclamationCircle } from "react-icons/fa
 export default function Contact() {
   const t = useTranslations("Contact");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("submitting");
+    setErrorMessage(null);
     
     const form = e.currentTarget;
     const formData = new FormData(form);
@@ -32,12 +34,21 @@ export default function Contact() {
         form.reset();
         setTimeout(() => setStatus("idle"), 5000);
       } else {
+        const result = await response.json().catch(() => ({}));
         setStatus("error");
-        setTimeout(() => setStatus("idle"), 5000);
+        setErrorMessage(result.error || t("errorMessage") || "Произошла ошибка при отправке");
+        setTimeout(() => {
+          setStatus("idle");
+          setErrorMessage(null);
+        }, 5000);
       }
     } catch (error) {
       setStatus("error");
-      setTimeout(() => setStatus("idle"), 5000);
+      setErrorMessage(t("errorMessage") || "Произошла ошибка при отправке");
+      setTimeout(() => {
+        setStatus("idle");
+        setErrorMessage(null);
+      }, 5000);
     }
   };
 
@@ -80,6 +91,10 @@ export default function Contact() {
                   id="name"
                   name="name"
                   required
+                  minLength={2}
+                  maxLength={50}
+                  pattern="^[^<>{}]*$"
+                  title="Имя не должно содержать специальные символы"
                   className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                   placeholder={t("namePlaceholder")}
                 />
@@ -93,6 +108,8 @@ export default function Contact() {
                   id="telegram"
                   name="telegram"
                   required
+                  minLength={3}
+                  maxLength={50}
                   className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors"
                   placeholder={t("telegramPlaceholder")}
                 />
@@ -107,6 +124,8 @@ export default function Contact() {
                 id="message"
                 name="message"
                 required
+                minLength={10}
+                maxLength={1000}
                 rows={5}
                 className="w-full bg-background border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors resize-none"
                 placeholder={t("messagePlaceholder")}
@@ -121,7 +140,7 @@ export default function Contact() {
               {status === "idle" && <><FaPaperPlane /> {t("sendButton")}</>}
               {status === "submitting" && <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />}
               {status === "success" && <><FaCheckCircle className="text-green-400" /> {t("successMessage")}</>}
-              {status === "error" && <><FaExclamationCircle className="text-red-400" /> {t("errorMessage")}</>}
+              {status === "error" && <><FaExclamationCircle className="text-red-400" /> {errorMessage || t("errorMessage")}</>}
             </button>
           </form>
         </motion.div>
